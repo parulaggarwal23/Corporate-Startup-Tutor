@@ -152,6 +152,48 @@
       "notes_status": "provided",
       "reflection_status": "completed",
       "created_at": "2026-09-09 13:46:43.902855"
+    },
+    {
+      "id": 18,
+      "course_id": 2,
+      "group_id": 1,
+      "date": "2026-08-24",
+      "day_of_week": "Monday",
+      "duration_hours": 1.0,
+      "week_number": 4,
+      "title": "The Nature and Evolution of Technology",
+      "notes_content": "Technology develops to fulfil human needs and solve practical problems. According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components. Technology continuously evolves as human needs, scientific knowledge and social conditions change. This process is known as the co-evolution of technology and society.",
+      "notes_status": "provided",
+      "reflection_status": "completed",
+      "created_at": "2026-11-16 05:15:09.158595"
+    },
+    {
+      "id": 19,
+      "course_id": 2,
+      "group_id": 1,
+      "date": "2026-08-25",
+      "day_of_week": "Tuesday",
+      "duration_hours": 2.0,
+      "week_number": 4,
+      "title": "Understanding Technical Functions",
+      "notes_content": "Technical functions describe what an artefact is designed to do and how its components contribute to its operation. Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions). These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.",
+      "notes_status": "provided",
+      "reflection_status": "completed",
+      "created_at": "2026-11-16 05:15:49.414269"
+    },
+    {
+      "id": 20,
+      "course_id": 2,
+      "group_id": 1,
+      "date": "2026-09-01",
+      "day_of_week": "Tuesday",
+      "duration_hours": 2.0,
+      "week_number": 5,
+      "title": "Maintenance, Repair and Modification of Artefacts",
+      "notes_content": "Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function. Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose. These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?",
+      "notes_status": "provided",
+      "reflection_status": "completed",
+      "created_at": "2026-11-16 05:18:22.573980"
     }
   ],
   "fortnights": [
@@ -540,6 +582,45 @@
       "timestamp": "2026-09-09 14:30:54.644376",
       "fortnight_id": 2,
       "news_item_id": 2
+    },
+    {
+      "id": 29,
+      "course_id": 2,
+      "group_id": 1,
+      "contributor_name": "Student",
+      "mode": "reflection",
+      "session_id": 18,
+      "prompt_text": "Technology develops to fulfil human needs and solve practical problems. According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components. Technology continuously evolves as human needs, scientific knowledge and social conditions change. This process is known as the co-evolution of technology and society.",
+      "ai_response": "### Class Reflection\n\n**Key Points**\n- Technology develops to fulfil human needs and solve practical problems.\n- According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components.\n- Technology continuously evolves as human needs, scientific knowledge and social conditions change.\n- This process is known as the co-evolution of technology and society.\n\n**Explanation**\n- Technology is fundamentally driven by human goals and practical necessity. Rather than developing purely in isolation, technical developments arise in response to tangible human problems and societal requirements.\n- According to W. Brian Arthur's combinatorial theory, technological novelties rarely appear out of nowhere; instead, they emerge when inventors synthesize pre-existing technologies, mechanisms, and scientific knowledge into novel configurations.\n- As human knowledge and social conditions advance, existing technologies must continually adapt and transform to address emergent societal expectations and material realities.\n- The co-evolution of technology and society describes a reciprocal loop where human institutions and technical architectures constantly adapt to and influence each other over historical time.\n\n**One Open Question**\n- Does society determine the path of technological evolution, or does technological combination drive societal change?",
+      "timestamp": "2026-11-16 05:15:10.060259",
+      "fortnight_id": null,
+      "news_item_id": null
+    },
+    {
+      "id": 30,
+      "course_id": 2,
+      "group_id": 1,
+      "contributor_name": "Student",
+      "mode": "reflection",
+      "session_id": 19,
+      "prompt_text": "Technical functions describe what an artefact is designed to do and how its components contribute to its operation. Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions). These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.",
+      "ai_response": "### Class Reflection\n\n**Key Points**\n- Technical functions describe what an artefact is designed to do and how its components contribute to its operation.\n- Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions).\n- These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.\n\n**Explanation**\n- Technical functions define what an artefact is designed to achieve and how its constituent mechanisms operate together to fulfill its teleological purpose.\n- Different philosophical theories analyze functionality: Causal Role Theory focuses on component contributions to a capacity, Selected Effect Theory highlights evolutionary design history, and ICE Theory integrates designer Intentions, physical Capacities, and socio-technical Evolution.\n- Analyzing the relation between design intent, physical capacity, and practical use clarifies how engineered artefacts succeed or fail when deployed in actual human contexts.\n\n**One Open Question**\n- Can an artefact have a genuine technical function independent of human intentions and social use?",
+      "timestamp": "2026-11-16 05:15:50.402968",
+      "fortnight_id": null,
+      "news_item_id": null
+    },
+    {
+      "id": 31,
+      "course_id": 2,
+      "group_id": 1,
+      "contributor_name": "Student",
+      "mode": "reflection",
+      "session_id": 20,
+      "prompt_text": "Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function. Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose. These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?",
+      "ai_response": "### Class Reflection\n\n**Key Points**\n- Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function.\n- Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose.\n- These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?.\n\n**Explanation**\n- Maintenance and repair represent essential socio-technical practices that preserve functionality over time. Maintenance provides ongoing routine care, whereas repair intervenes after breakdown to restore an artefact to its intended operational state.\n- Modification alters an artefact's physical structure, behavior, or capabilities, either improving its efficiency or repurposing it to meet newly emerged goals beyond its original design envelope.\n- When components are continually replaced or modified—reminiscent of the philosophical Ship of Theseus problem—it forces engineers and philosophers to examine whether the artefact retains its fundamental identity or becomes an entirely new artefact.\n\n**One Open Question**\n- At what point does continuous repair or modification transform an artefact into a fundamentally new entity?",
+      "timestamp": "2026-11-16 05:18:29.157690",
+      "fortnight_id": null,
+      "news_item_id": null
     }
   ],
   "reflections": [
@@ -872,6 +953,51 @@
       "open_question": "- How can startups effectively improve their market validation to avoid failure?",
       "created_at": "2026-09-09 13:46:57.880205",
       "explanation": "- The session focused on understanding the fundamental challenges that cause new businesses to fail. It also covered the critical elements necessary for a startup to successfully continue operating and expand.\n- Several specific areas were identified as common root causes for startups not succeeding. These include challenges related to securing financial resources, effectively reaching potential customers, building a capable work team, providing strong leadership, ensuring the product genuinely meets customer needs, and confirming market demand through research.\n- Students participated in an activity specifically designed to examine why certain startups or companies did not succeed. The purpose was to understand the various reasons behind their failure by studying actual examples."
+    },
+    {
+      "id": 27,
+      "course_id": 2,
+      "session_id": 18,
+      "contributor_name": "Student",
+      "raw_notes": "Technology develops to fulfil human needs and solve practical problems. According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components. Technology continuously evolves as human needs, scientific knowledge and social conditions change. This process is known as the co-evolution of technology and society.",
+      "structured_reflection": "### Class Reflection\n\n**Key Points**\n- Technology develops to fulfil human needs and solve practical problems.\n- According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components.\n- Technology continuously evolves as human needs, scientific knowledge and social conditions change.\n- This process is known as the co-evolution of technology and society.\n\n**Explanation**\n- Technology is fundamentally driven by human goals and practical necessity. Rather than developing purely in isolation, technical developments arise in response to tangible human problems and societal requirements.\n- According to W. Brian Arthur's combinatorial theory, technological novelties rarely appear out of nowhere; instead, they emerge when inventors synthesize pre-existing technologies, mechanisms, and scientific knowledge into novel configurations.\n- As human knowledge and social conditions advance, existing technologies must continually adapt and transform to address emergent societal expectations and material realities.\n- The co-evolution of technology and society describes a reciprocal loop where human institutions and technical architectures constantly adapt to and influence each other over historical time.\n\n**One Open Question**\n- Does society determine the path of technological evolution, or does technological combination drive societal change?",
+      "key_points": "- Technology develops to fulfil human needs and solve practical problems.\n- According to W. Brian Arthur, new technologies often emerge by combining existing technologies, knowledge and components.\n- Technology continuously evolves as human needs, scientific knowledge and social conditions change.\n- This process is known as the co-evolution of technology and society.",
+      "important_concepts": "",
+      "examples_cases": "",
+      "insights": "",
+      "open_question": "- Does society determine the path of technological evolution, or does technological combination drive societal change?",
+      "created_at": "2026-11-16 05:15:10.056513",
+      "explanation": "- Technology is fundamentally driven by human goals and practical necessity. Rather than developing purely in isolation, technical developments arise in response to tangible human problems and societal requirements.\n- According to W. Brian Arthur's combinatorial theory, technological novelties rarely appear out of nowhere; instead, they emerge when inventors synthesize pre-existing technologies, mechanisms, and scientific knowledge into novel configurations.\n- As human knowledge and social conditions advance, existing technologies must continually adapt and transform to address emergent societal expectations and material realities.\n- The co-evolution of technology and society describes a reciprocal loop where human institutions and technical architectures constantly adapt to and influence each other over historical time."
+    },
+    {
+      "id": 28,
+      "course_id": 2,
+      "session_id": 19,
+      "contributor_name": "Student",
+      "raw_notes": "Technical functions describe what an artefact is designed to do and how its components contribute to its operation. Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions). These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.",
+      "structured_reflection": "### Class Reflection\n\n**Key Points**\n- Technical functions describe what an artefact is designed to do and how its components contribute to its operation.\n- Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions).\n- These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.\n\n**Explanation**\n- Technical functions define what an artefact is designed to achieve and how its constituent mechanisms operate together to fulfill its teleological purpose.\n- Different philosophical theories analyze functionality: Causal Role Theory focuses on component contributions to a capacity, Selected Effect Theory highlights evolutionary design history, and ICE Theory integrates designer Intentions, physical Capacities, and socio-technical Evolution.\n- Analyzing the relation between design intent, physical capacity, and practical use clarifies how engineered artefacts succeed or fail when deployed in actual human contexts.\n\n**One Open Question**\n- Can an artefact have a genuine technical function independent of human intentions and social use?",
+      "key_points": "- Technical functions describe what an artefact is designed to do and how its components contribute to its operation.\n- Different theories explain these functions, including Causal Role Theory, Selected Effect Theory and ICE Theory (Intentions, Capacities and Evolutions).\n- These approaches help us understand the relationship between an artefact's design, purpose and actual functioning.",
+      "important_concepts": "",
+      "examples_cases": "",
+      "insights": "",
+      "open_question": "- Can an artefact have a genuine technical function independent of human intentions and social use?",
+      "created_at": "2026-11-16 05:15:50.400079",
+      "explanation": "- Technical functions define what an artefact is designed to achieve and how its constituent mechanisms operate together to fulfill its teleological purpose.\n- Different philosophical theories analyze functionality: Causal Role Theory focuses on component contributions to a capacity, Selected Effect Theory highlights evolutionary design history, and ICE Theory integrates designer Intentions, physical Capacities, and socio-technical Evolution.\n- Analyzing the relation between design intent, physical capacity, and practical use clarifies how engineered artefacts succeed or fail when deployed in actual human contexts."
+    },
+    {
+      "id": 29,
+      "course_id": 2,
+      "session_id": 20,
+      "contributor_name": "Student",
+      "raw_notes": "Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function. Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose. These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?",
+      "structured_reflection": "### Class Reflection\n\n**Key Points**\n- Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function.\n- Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose.\n- These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?.\n\n**Explanation**\n- Maintenance and repair represent essential socio-technical practices that preserve functionality over time. Maintenance provides ongoing routine care, whereas repair intervenes after breakdown to restore an artefact to its intended operational state.\n- Modification alters an artefact's physical structure, behavior, or capabilities, either improving its efficiency or repurposing it to meet newly emerged goals beyond its original design envelope.\n- When components are continually replaced or modified—reminiscent of the philosophical Ship of Theseus problem—it forces engineers and philosophers to examine whether the artefact retains its fundamental identity or becomes an entirely new artefact.\n\n**One Open Question**\n- At what point does continuous repair or modification transform an artefact into a fundamentally new entity?",
+      "key_points": "- Maintenance involves keeping an artefact in working condition, while repair focuses on fixing faults and restoring its intended function.\n- Modification involves changing an artefact's structure or capabilities to improve it or adapt it for another purpose.\n- These activities raise an important philosophical question: when does changing an artefact affect its original identity and make it a different artefact?.",
+      "important_concepts": "",
+      "examples_cases": "",
+      "insights": "",
+      "open_question": "- At what point does continuous repair or modification transform an artefact into a fundamentally new entity?",
+      "created_at": "2026-11-16 05:18:29.153835",
+      "explanation": "- Maintenance and repair represent essential socio-technical practices that preserve functionality over time. Maintenance provides ongoing routine care, whereas repair intervenes after breakdown to restore an artefact to its intended operational state.\n- Modification alters an artefact's physical structure, behavior, or capabilities, either improving its efficiency or repurposing it to meet newly emerged goals beyond its original design envelope.\n- When components are continually replaced or modified—reminiscent of the philosophical Ship of Theseus problem—it forces engineers and philosophers to examine whether the artefact retains its fundamental identity or becomes an entirely new artefact."
     }
   ],
   "student_notes": []

@@ -112,7 +112,7 @@ export default function Dashboard({ courseId = 1, onNavigate }) {
           >
             <div style={{ fontSize: '24px', marginBottom: '6px' }}>📋</div>
             <div style={{ fontSize: '14px', fontWeight: '700' }}>Prompt Log</div>
-            <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>Review shared Student Prompt $\rightarrow$ AI $\rightarrow$ Note audit sequence.</p>
+            <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>Review shared Student Prompt → AI → Note audit sequence.</p>
           </div>
 
           <div

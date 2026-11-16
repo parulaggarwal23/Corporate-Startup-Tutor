@@ -87,11 +87,33 @@ def generate_class_reflection_structured(notes: str, course_id: int = 1) -> dict
     parsed = _parse_reflection_sections(cleaned_output)
     return parsed
 
+def _split_into_sentences(text: str) -> list:
+    """Splits text into clean sentences without splitting on initials (e.g. W. Brian Arthur) or common abbreviations."""
+    cleaned = text.strip()
+    cleaned = re.sub(r'[\r\n]+', ' ', cleaned)
+    # Split on punctuation followed by space and capital, avoiding single letter initials and common abbreviations
+    raw = re.split(r'(?<!\b[A-Z]\.)(?<!\be\.g\.)(?<!\bi\.e\.)(?<=[.!?])\s+(?=[A-Z0-9])', cleaned)
+    sentences = []
+    for s in raw:
+        s = s.strip()
+        if len(s) > 5:
+            if not s.endswith(('.', '!', '?')):
+                s += '.'
+            sentences.append(s)
+    return sentences if sentences else [cleaned]
+
 def _generate_session_specific_question(notes: str, course_id: int = 1) -> str:
     """Generates a natural, session-specific open question directly based on key terms/topics in the notes."""
     lowered = notes.lower()
 
-    if any(k in lowered for k in ["statement", "framing", "broad", "narrow", "circular"]):
+    # Philosophy topics (Course 2)
+    if any(k in lowered for k in ["technical function", "causal role", "selected effect", "ice theory"]):
+        return "Can an artefact have a genuine technical function independent of human intentions and social use?"
+    elif any(k in lowered for k in ["arthur", "co-evolution", "evolution of technology", "fulfil human needs", "combining existing"]):
+        return "Does society determine the path of technological evolution, or does technological combination drive societal change?"
+    elif any(k in lowered for k in ["maintenance", "repair", "original identity", "different artefact"]):
+        return "At what point does continuous repair or modification transform an artefact into a fundamentally new entity?"
+    elif any(k in lowered for k in ["statement", "framing", "broad", "narrow", "circular"]):
         return "How do we decide whether a statement is too broad or too narrow?"
     elif any(k in lowered for k in ["machine", "tool", "beyond", "conceptual"]):
         return "How can we understand technology beyond just machines and tools?"
@@ -99,16 +121,18 @@ def _generate_session_specific_question(notes: str, course_id: int = 1) -> str:
         return "What made the ants' path more complex than it first appeared?"
     elif any(k in lowered for k in ["pendulum", "timekeeping", "clock"]):
         return "Why was a pendulum useful for measuring regular intervals of time?"
-    elif any(k in lowered for k in ["api", "system", "communicate"]):
-        return "How does an API allow two different systems to communicate?"
     elif any(k in lowered for k in ["artefact", "artifact", "object"]):
         return "What makes an object a technological artefact?"
+
+    # Corporate Startup Synergies topics (Course 1)
+    elif any(k in lowered for k in ["api", "system", "communicate"]):
+        return "How does an API allow two different systems to communicate?"
     elif any(k in lowered for k in ["cvc", "venture", "investment"]):
         return "What is the key difference between strategic fit and financial return?"
     elif any(k in lowered for k in ["pilot", "procurement", "scaling"]):
         return "How can startups move successfully from pilot phase to enterprise scaling?"
 
-    sentences = [s.strip() for s in notes.split('.') if len(s.strip()) > 10]
+    sentences = _split_into_sentences(notes)
     if sentences:
         first = sentences[0]
         cleaned = re.sub(r'^(we discussed|today we|the class|in this lecture|the lecturer|we looked at|we analyzed)\s+', '', first, flags=re.IGNORECASE).strip()
@@ -211,7 +235,34 @@ def _elaborate_fallback_point(sentence: str) -> str:
 
     lowered = s.lower()
 
-    if ("mechanical lab" in lowered or "golf cart" in lowered or "observed a car" in lowered) and "artefact" in lowered:
+    # Combinatorial Evolution & Arthur (Session 6)
+    if any(k in lowered for k in ["arthur", "combin", "components"]) and ("technolog" in lowered or "emerge" in lowered):
+        return "According to W. Brian Arthur's combinatorial theory, technological novelties rarely appear out of nowhere; instead, they emerge when inventors synthesize pre-existing technologies, mechanisms, and scientific knowledge into novel configurations."
+    elif "co-evolution" in lowered:
+        return "The co-evolution of technology and society describes a reciprocal loop where human institutions and technical architectures constantly adapt to and influence each other over historical time."
+    elif any(k in lowered for k in ["continuously evolves", "scientific knowledge", "social conditions"]):
+        return "As human knowledge and social conditions advance, existing technologies must continually adapt and transform to address emergent societal expectations and material realities."
+    elif any(k in lowered for k in ["fulfil", "fulfill", "human need", "practical problem"]):
+        return "Technology is fundamentally driven by human goals and practical necessity. Rather than developing purely in isolation, technical developments arise in response to tangible human problems and societal requirements."
+
+    # Technical Functions & ICE Theory (Session 7)
+    elif any(k in lowered for k in ["causal role", "selected effect", "ice theory"]):
+        return "Different philosophical theories analyze functionality: Causal Role Theory focuses on component contributions to a capacity, Selected Effect Theory highlights evolutionary design history, and ICE Theory integrates designer Intentions, physical Capacities, and socio-technical Evolution."
+    elif any(k in lowered for k in ["technical function", "designed to do", "operation"]):
+        return "Technical functions define what an artefact is designed to achieve and how its constituent mechanisms operate together to fulfill its teleological purpose."
+    elif any(k in lowered for k in ["design, purpose", "actual functioning", "relationship"]):
+        return "Analyzing the relation between design intent, physical capacity, and practical use clarifies how engineered artefacts succeed or fail when deployed in actual human contexts."
+
+    # Maintenance, Repair, Modification, and Identity (Session 8)
+    elif any(k in lowered for k in ["identity", "different artefact", "affect its original"]):
+        return "When components are continually replaced or modified—reminiscent of the philosophical Ship of Theseus problem—it forces engineers and philosophers to examine whether the artefact retains its fundamental identity or becomes an entirely new artefact."
+    elif any(k in lowered for k in ["maintenance", "repair", "working condition", "fixing fault"]):
+        return "Maintenance and repair represent essential socio-technical practices that preserve functionality over time. Maintenance provides ongoing routine care, whereas repair intervenes after breakdown to restore an artefact to its intended operational state."
+    elif any(k in lowered for k in ["modification", "changing an artefact", "capabilities", "adapt"]):
+        return "Modification alters an artefact's physical structure, behavior, or capabilities, either improving its efficiency or repurposing it to meet newly emerged goals beyond its original design envelope."
+
+    # Earlier Philosophy Sessions
+    elif ("mechanical lab" in lowered or "golf cart" in lowered or "observed a car" in lowered) and "artefact" in lowered:
         return "The car was used as an example of a technological artefact that can be examined through the technologies present in it. Observing the actual vehicle helped us connect the idea of an artefact with a real-world object."
     elif "essential" in lowered or "removed" in lowered:
         return "This activity made us distinguish between technologies that are necessary for the car to retain its basic function and those that are not essential. It encouraged us to think about what can be removed from a technological artefact without changing its basic identity or function."
@@ -241,17 +292,14 @@ def _elaborate_fallback_point(sentence: str) -> str:
             clean = clean[0].upper() + clean[1:]
             if not clean.endswith('.'):
                 clean += '.'
-            return f"{clean} Examining this aspect during the class session clarified how the underlying mechanism operates in practice."
+            return f"{clean} This analytical perspective directly connects the classroom discussion with real-world technological challenges."
         return "Examining this point provided clear insight into how the session topic functions."
 
 def _generate_fallback_reflection(notes: str, course_id: int = 1) -> str:
     """Strictly grounded 3-section fallback reflection generator based ONLY on input notes."""
-    sentences = [s.strip() for s in notes.split('.') if len(s.strip()) > 5]
-    if not sentences:
-        sentences = [notes.strip()]
-
+    sentences = _split_into_sentences(notes)
     points_list = sentences[:4]
-    points_str = "\n".join([f"- {s}." if not s.endswith('.') else f"- {s}" for s in points_list])
+    points_str = "\n".join([f"- {s}" if s.endswith('.') else f"- {s}." for s in points_list])
 
     # Generate distinct 2-3 sentence explanation for EACH Key Point
     explanation_list = []
@@ -261,7 +309,6 @@ def _generate_fallback_reflection(notes: str, course_id: int = 1) -> str:
             explanation_list.append(f"- {elab}")
 
     explanation_str = "\n".join(explanation_list) if explanation_list else f"- {_elaborate_fallback_point(sentences[0])}"
-
     question_str = _generate_session_specific_question(notes, course_id)
 
     return (
